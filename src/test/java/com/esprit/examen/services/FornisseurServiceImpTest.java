@@ -31,17 +31,7 @@ public class FornisseurServiceImpTest {
 		assertEquals(expected + 1, fornisseurservice.retrieveAllFournisseurs().size());
 		fornisseurservice.deleteFournisseur(fournisseur.getIdFournisseur());
  	}
-	@Test
-	public void addFournisseur() throws ParseException {
-		Fournisseur f = new Fournisseur( "test2", "code", CategorieFournisseur.ORDINAIRE, null);
-		Fournisseur fornisseur = fornisseurservice.addFournisseur(f);
-		System.out.print("fournisseur "+fornisseur);
-		assertNotNull(fornisseur.getIdFournisseur());
-		assertNotNull(fornisseur.getCode());
-		assertNotNull(fornisseur.getLibelle());
-		assertNotNull(fornisseur.getCategorieFournisseur());
-		fornisseurservice.deleteFournisseur(fornisseur.getIdFournisseur());	
-	}
+	
 	@Test
 	public void deleteFournisseur() throws ParseException {
 		Fournisseur f = new Fournisseur();
